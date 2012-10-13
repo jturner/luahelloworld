@@ -1,0 +1,2 @@
+Lua hello world C module using simple suckless style Makefile +
+config.mk build system.
