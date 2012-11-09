@@ -23,13 +23,12 @@
 static int l_greet(lua_State *L)
 {
 	char buf[BUFSIZ];
-	char *greeting = "Hello ";
 
+	const char *greeting = "Hello ";
 	const char *str = luaL_checkstring(L, 1);
 
-	strncpy(buf, greeting, sizeof(buf) - 1);
-	buf[sizeof(buf) - 1] = '\0';
-	strncat(buf, str, sizeof(buf) - 1 - strlen(buf));
+	strlcpy(buf, greeting, sizeof(buf));
+	strlcat(buf, str, sizeof(buf));
 
 	lua_pushstring(L, buf);
 	return 1;
