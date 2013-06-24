@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 James Turner <james@calminferno.net>
+ * Copyright (c) 2012, 2013 James Turner <james@calminferno.net>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -41,7 +41,6 @@ int luaopen_helloworld(lua_State *L)
 		{ NULL,		NULL }
 	};
 
-	lua_newtable(L);
-	luaL_setfuncs(L, methods, 0);
+	luaL_newlib(L, methods);
 	return 1;
 }
