@@ -11,5 +11,8 @@ LUALIB = -L/usr/local/lib
 CFLAGS = -fPIC -Wall -Os ${LUAINC}
 LDFLAGS = -shared ${LUALIB}
 
+# Mac OS X
+#LDFLAGS += -llua
+
 # compiler and linker
 CC = cc
