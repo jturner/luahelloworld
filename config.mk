@@ -9,10 +9,13 @@ LUALIB = -L/usr/local/lib
 
 # flags
 CFLAGS = -fPIC -Wall -Os ${LUAINC}
-LDFLAGS = -shared ${LUALIB}
+LDFLAGS = ${LUALIB}
+
+# BSD
+LDFLAGS += -shared
 
 # Mac OS X
-#LDFLAGS += -llua
+#LDFLAGS += -bundle -undefined dynamic_lookup
 
 # compiler and linker
 CC = cc
