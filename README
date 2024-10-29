@@ -1,2 +1,4 @@
 Lua hello world C module using simple suckless style Makefile +
 config.mk build system.
+
+Project moved to sourcehut: https://git.sr.ht/~jturner/luahelloworld
